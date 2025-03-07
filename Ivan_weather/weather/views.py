@@ -48,8 +48,8 @@ def rateOfExchanges_function(request):
         Сurrency1 = request.POST.get('Currencies1')
         Сurrency2 = request.POST.get('Currencies2')
     else:
-        Сurrency1 = "Rub"
-        Currency2 = "USD"
+        Сurrency1 = "RUB"
+        Сurrency2 = "USD"
     if request.GET:
         Round = request.GET['Round']
     else:

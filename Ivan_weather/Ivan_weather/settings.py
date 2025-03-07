@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'weather.apps.WeatherConfig',
     "polls.apps.PollsConfig",
 ]
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://productively-smitten-humpback.cloudpub.ru',
+]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
