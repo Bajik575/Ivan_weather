@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<head>
+    <link type="text/css" href="\static\css\CSS2.css" rel="stylesheet" />
+</head>
+<div align="center">
+    <form method="post" align="center" action="{% url 'rateOfExchanges_name' %}">
+        <p>Введите округление:</p>
+        <input type="text" id="Round" name="Round">
+        <label for="Currencies1">Выберите 1 валюту:</label>
+        <select id="Currencies1" name="Currencies1">
+            <option value="USD">Доллар</option>
+            <option value="RUB">Рубль</option>
+            <option value="EUR">Евро</option>
+            <option value="RUB">Рубль</option>
+        </select>
+        <label for="Currencies2">Выберите 1 валюту:</label>
+        <select id="Currencies2" name="Currencies2">
+            <option value="USD">Доллар</option>
+            <option value="RUB">Рубль</option>
+            <option value="EUR">Евро</option>
+            <option value="RUB">Рубль</option>
+        </select>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Найти</button>
+    </form>
+    <p>{{Сurrency1}} в {{Сurrency2}}</p>
+    <h2>{{Ruble}}</h2>
+</div>
+{% endblock %}

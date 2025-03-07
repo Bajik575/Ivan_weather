@@ -1,0 +1,49 @@
+:root {
+    --main-font: 'Roboto', Arial, sans-serif;
+    --font-size: 16px;
+    --font-color: #333;
+}
+
+input {
+    background-color: white;
+    border: 5px solid #bababa;
+    border-radius: 10px;
+    width: 5%;
+}
+
+label {
+    background-color: white;
+    border: 5px solid #bababa;
+    border-radius: 1px;
+    padding: 1px 2px;
+    font-family: var(--main-font);
+    font-size: px;
+    color: var(--font-color);
+}
+
+h2 {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: white;
+    border: 5px solid #bababa;
+    border-radius: 3px;
+    padding: 1px 2px;
+    margin: 1% 40% 1% 40%;
+}
+
+p {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: white;
+    border: 5px solid #bababa;
+    border-radius: 3px;
+    padding: 1px 2px;
+    display: inline-block;
+    margin: 0px 0px 0px 0px;
+}
+
+select {
+    background-color: rgb(255, 255, 255);
+    border: 5px solid #bababa;
+    border-radius: 10px;
+    width: auto;
+    font-family: 'Roboto', Arial, sans-serif;
+}

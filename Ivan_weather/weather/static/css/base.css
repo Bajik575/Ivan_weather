@@ -7,67 +7,71 @@
   --bg-color: #141218;
 }
 
-.link{
-text-decoration: none;
-color:#ffffff
-}
-.p{
-margin: 1em;
-
-
-
-
-
+.link {
+  text-decoration: none;
+  color: #ffffff
 }
 
-.h1 {
-font-family: 'Roboto', Arial, sans-serif;
-text-shadow: 0px 0px 20px rgba(256, 256, 256, 10);
-font-size: 22,5px;
+.p {
+  margin: 1em;
+}
+
+h1 {
+  background-color: white;
+  font-family: 'Roboto', Arial, sans-serif;
+  text-shadow: 0px 0px 20px rgba(256, 256, 256, 10);
 
 
-html, body {
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  background-color: var(--bg-color);
-  box-shadow: 10px 5px 5px black;
+
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: var(--bg-color);
+    box-shadow: 10px 5px 5px black;
+  }
 }
-}
+
 * {
   box-sizing: border-box;
-}button {
-  position:relative;
+}
+
+button {
+  position: relative;
   padding: 10px 20px;
   border: none;
   background: none;
   cursor: pointer;
-  
+
   font-family: "Source Code Pro";
   font-weight: 900;
   text-transform: uppercase;
   font-size: 30px;
   color: #ffffff;
-  
+
   background-color: var(--btn-color);
   box-shadow: var(--shadow-color) 2px 2px 22px;
   border-radius: 49px;
-  z-index: 0;  
-  overflow: hidden;   
+  z-index: 0;
+  overflow: hidden;
 }
-button::after{
+
+button::after {
   font-weight: 200;
   top: -30px;
   left: -20px;
-} 
+}
+
 /* bubbles */
 button::before {
   content: '';
   pointer-events: none;
   opacity: .3;
   background:
-    radial-gradient(circle at 20% 35%,  transparent 0,  transparent 1px, var(--text-color) 3px, var(--text-color) 1px, transparent 15px),
-    radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 15px, transparent 5px),
+    radial-gradient(circle at 20% 35%, transparent 0, transparent 1px, var(--text-color) 3px, var(--text-color) 1px, transparent 15px),
+    radial-gradient(circle at 75% 44%, transparent 0, transparent 2px, var(--text-color) 3px, var(--text-color) 15px, transparent 5px),
     radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 10px, transparent 10px);
 
   width: 100%;
@@ -82,14 +86,8 @@ button::before {
   from {
     transform: translate();
   }
+
   to {
     transform: translate(0, -66.666%);
   }
 }
-
-
-.title{
-	font-size: 150%;
-	text-align: center;
-    border-radius: 90px;
-	background: #ffffff;
