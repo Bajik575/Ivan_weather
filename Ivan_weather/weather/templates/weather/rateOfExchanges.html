@@ -6,27 +6,45 @@
 </head>
 <div align="center">
     <form method="post" align="center" action="{% url 'rateOfExchanges_name' %}">
-        <p>Введите округление:</p>
+        <p>Округление:</p>
         <input type="text" id="Round" name="Round">
-        <label for="Currencies1">Выберите 1 валюту:</label>
+        <p>Количество:</p>
+        <input type="text" id="Quantity" name="Quantity">
+        <label for="Currencies1">1 валюта:</label>
         <select id="Currencies1" name="Currencies1">
             <option value="USD">Доллар</option>
             <option value="RUB">Рубль</option>
             <option value="EUR">Евро</option>
-            <option value="RUB">Рубль</option>
+            <option value="DKK">Датская крона</option>
+            <option value="AED">Дирхам ОАЭ</option>
+            <option value="EGP">Египетский фунт</option>
+            <option value="INR">Индийская рупия</option>
+            <option value="SGD">Сингапурский доллар</option>
+            <option value="UAH">Гривна</option>
+            <option value="SGD">Сингапурский доллар</option>
+            <option value="CHF">Швейцарский франк</option>
+            <option value="BYN">Белорусский рубль</option>
         </select>
-        <label for="Currencies2">Выберите 1 валюту:</label>
+        <label for="Currencies2">2 валюта:</label>
         <select id="Currencies2" name="Currencies2">
             <option value="USD">Доллар</option>
             <option value="RUB">Рубль</option>
             <option value="EUR">Евро</option>
-            <option value="RUB">Рубль</option>
+            <option value="DKK">Датская крона</option>
+            <option value="AED">Дирхам ОАЭ</option>
+            <option value="EGP">Египетский фунт</option>
+            <option value="INR">Индийская рупия</option>
+            <option value="SGD">Сингапурский доллар</option>
+            <option value="UAH">Гривна</option>
+            <option value="SGD">Сингапурский доллар</option>
+            <option value="CHF">Швейцарский франк</option>
+            <option value="BYN">Белорусский рубль</option>
         </select>
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Найти</button>
+        <button type="submit">Посчитать</button>
     </form>
-    <p>{{Сurrency1}} в {{Сurrency2}}</p>
+    <p>{{Сurrency1}} в {{Quantity}} {{Сurrency2}}:</p>
     <h2>{{Ruble}}</h2>
 </div>
 {% endblock %}

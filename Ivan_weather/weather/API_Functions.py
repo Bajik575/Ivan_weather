@@ -23,11 +23,16 @@ def get_weather_2(city):
 		return 'Error'
 
 
-def GetRateOfExchange(Currency1, Currency2,Round):
+def GetRateOfExchange(Currency1, Currency2,Quantity,Round):
 	data = requests.get("https://www.cbr-xml-daily.ru/daily_json.js").json()
 	if Currency1 == "RUB":
-		return round(data['Valute'][Currency2]['Value'],Round)
+		Value =  round(data['Valute'][Currency2]['Value'],Round)
 	elif Currency2 == "RUB":
-		return round(1/data['Valute'][Currency1]['Value'],Round)
+		Value =  round(1/data['Valute'][Currency1]['Value'],Round)
 	else:
-		return round(data['Valute'][Currency1]['Value'] / data['Valute'][Currency2]['Value'],Round)
+		Value =  round(data['Valute'][Currency1]['Value'] / data['Valute'][Currency2]['Value'],Round)
+	if Round <= 0: Value = int(Value)
+	return Value * Quantity
+
+data = requests.get("https://www.cbr-xml-daily.ru/daily_json.js").json()
+print(data)
